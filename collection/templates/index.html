@@ -2,5 +2,8 @@
 {block title %}Homepage - {{ block.super}}{ % endblock %}
 {% block content %}
   <h1>Homepage</h1>
-  <p>{{number}}</p>
+  {% for winery in wineries %}
+  <h2>{{ winery.name }}</h2>
+  <p>{{ winery.description }}</p>
+  {% endfor %}
 {% endblock %}
